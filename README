@@ -24,6 +24,11 @@ Pre-Flight Instructions
 * For certificate chains: cat all the certs together
 
     cat cert.der server-chain2.der server-chain1.der ct_root.der > certs.der
+    
+or export them into .p7b
+
+    openssl crl2pkcs7 -nocrl -certfile fullchain.pem -out certs.p7b
+    
 
 * Build ImportKey
 
